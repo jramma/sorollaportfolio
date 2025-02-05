@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.7",
-    "@astrojs/netlify": "^6.1.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/vercel": "^8.0.5",
     "@tailwindcss/vite": "^4.0.0",
     "astro": "^5.1.9",
     "astro-icon": "^1.1.5",
