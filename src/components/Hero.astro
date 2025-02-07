@@ -2,22 +2,26 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/*.{jpeg,jpg,png,gif}",
 );
 ---
 
 <section class="py-20 flex md:flex-row flex-col px-4 md:px-0 gap-10 md:gap-0">
   <div class="flex flex-col gap-6 justify-start items-start md:w-1/2">
-    <h1 class="text-pblack">Hi, my name is Joaquín Sorolla</h1>
-    <p class="text-6xl font-bold">Duels with the sun are fewer.</p>
-    <p>
-      I am Joaquín Sorolla y Bastida, a Spanish painter. A prolific artist, I
-      left behind more than 2,200 cataloged works.
+    <h1 class="text-pblack">Hi, my name is Sherman</h1>
+    <p class="text-3xl font-bold">
+      I believe there are oppressive forces in the world, yet we are free enough
+      to fight them.
     </p>
+    <p>
+      I worked as a backend software engineer in China for 6 years. Now I am
+      studying Interactive Media Design at Algonquin College. I am exploring how
+      to become an independent developer.
+    </p>
+    <!-- replace to linkin -->
     <a
       rel="noopener noreferrer"
-      href="https://jramma.com"
-      target="_blank"
+      href="/about"
       class="bg-pgreen px-5 py-3 border-1 border-black rounded-lg shadow-card hover:shadow-hover transition"
     >
       Work together
@@ -35,9 +39,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         class="bg-pblue border-3 border-black rounded-2xl h-52 w-60 shadow-card group-hover:shadow-hover flex transition relative"
       >
         <div
-          class="absolute -top-8 -left-12 text-5xl bg-ppink px-5 py-1 z-10 shadow-card group-hover:shadow-hover transition rounded-t-2xl border-3 border-black rounded-bl-2xl rounded-br-sm"
+          class="absolute -top-8 -left-12 text-5xl bg-purple-300 px-5 py-1 z-10 shadow-card group-hover:shadow-hover transition rounded-t-2xl border-3 border-black rounded-bl-2xl rounded-br-sm"
         >
-          <Icon name="paint" />
+          <Icon name="blog" />
         </div>
         <div
           class="absolute top-16 -right-16 text-5xl bg-pyellow p-2 z-10 shadow-card group-hover:shadow-hover transition rounded-full border-3 border-black"
@@ -48,12 +52,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           class="absolute text-nowrap flex items-center gap-4 -bottom-12 right-0 pr-4 bg-pgreen pl-1 z-10 shadow-card1 group-hover:shadow-card transition rounded-full border-3 border-black"
         >
           <Icon name="beach" />
-          <p>Joaquín Sorolla</p>
+          <p>Sherman Liu</p>
         </div>
         <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
           <Image
             class="object-bottom absolute bottom-0 group-hover:scale-105 transition"
-            src={images["/src/assets/hero.png"]()}
+            src={images["/src/assets/selfie.jpg"]()}
             alt="Sorolla, photo wiki"
           />
         </div>
