@@ -2,19 +2,23 @@
 import { getCollection } from "astro:content";
 import PostListItem from "./PostListItem.astro";
 
+const SCHOOL_WORK = "algonquin";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-// Todo tag
-const schools = posts.slice(0, 1);
-const personals = posts.slice(1);
+const school_works = posts.filter((post) =>
+  post.data.tags?.includes(SCHOOL_WORK),
+);
+const personal_works = posts.filter(
+  (post) => !post.data.tags?.includes(SCHOOL_WORK),
+);
 ---
 
 <section class="flex flex-col text-center gap-1">
   <h2 class="text-2xl font-bold text-left">School work</h2>
   <ul class="flex flex-wrap justify-center md:justify-start gap-5 py-10">
     {
-      schools.map((post) => {
+      school_works.map((post) => {
         return (
           <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
             <PostListItem
@@ -24,18 +28,6 @@ const personals = posts.slice(1);
               pubDate={post.data.pubDate}
               description={post.data.description}
             />
-            {/* <a href={`/blog/${post.id}/`} class="flex flex-col gap-4">
-              <div
-                class={`${randomClass} text-4xl p-2 self-start border-1 border-black shadow-card1 group-hover:shadow-card transition`}
-              >
-                <Icon name={post.data.icon} />
-              </div>
-              <h4 class="text-xl font-semibold">{post.data.title}</h4>
-              <p class="date -mt-4 text-sm font-light">
-                <FormattedDate date={post.data.pubDate} />
-              </p>
-            </a> */}
-            {/* <div set:html={post.data.description} /> */}
           </li>
         );
       })
@@ -44,7 +36,7 @@ const personals = posts.slice(1);
   <h2 class="text-2xl font-bold text-left">Personal work</h2>
   <ul class="flex flex-wrap justify-center md:justify-start gap-5 py-10">
     {
-      personals.map((post) => {
+      personal_works.map((post) => {
         return (
           <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
             <PostListItem
