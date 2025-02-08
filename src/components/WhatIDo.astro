@@ -1,33 +1,30 @@
 ---
 import { getCollection } from "astro:content";
+import PostListItem from "./PostListItem.astro";
+
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-import FormattedDate from "@/components/FormattedDate.astro";
-import { Icon } from "astro-icon/components";
-
-const bgClasses = [
-  "bg-pgreen rounded-full",
-  "bg-pblue rounded-2xl",
-  "bg-ppink ",
-  "bg-pyellow rounded-md",
-];
-
-const getRandomClass = () => {
-  return bgClasses[Math.floor(Math.random() * bgClasses.length)];
-};
+// Todo tag
+const schools = posts.slice(0, 1);
+const personals = posts.slice(1);
 ---
 
-<section class="flex flex-col text-center gap-4 " >
-  <!-- <p class="text-pblack">It is necessary to observe.</p> -->
-  <!-- <h2 class="text-4xl font-bold">Treated like a portrait.</h2> -->
-  <ul class="flex flex-wrap justify-center md:justify-start gap-8 py-20">
+<section class="flex flex-col text-center gap-1">
+  <h2 class="text-2xl font-bold text-left">School work</h2>
+  <ul class="flex flex-wrap justify-center md:justify-start gap-5 py-10">
     {
-      posts.map((post) => {
-        const randomClass = getRandomClass();
+      schools.map((post) => {
         return (
           <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
-            <a href={`/blog/${post.id}/`} class="flex flex-col gap-4">
+            <PostListItem
+              id={post.id}
+              title={post.data.title}
+              icon={post.data.icon}
+              pubDate={post.data.pubDate}
+              description={post.data.description}
+            />
+            {/* <a href={`/blog/${post.id}/`} class="flex flex-col gap-4">
               <div
                 class={`${randomClass} text-4xl p-2 self-start border-1 border-black shadow-card1 group-hover:shadow-card transition`}
               >
@@ -37,8 +34,26 @@ const getRandomClass = () => {
               <p class="date -mt-4 text-sm font-light">
                 <FormattedDate date={post.data.pubDate} />
               </p>
-            </a>
-            <div set:html={post.data.description} />
+            </a> */}
+            {/* <div set:html={post.data.description} /> */}
+          </li>
+        );
+      })
+    }
+  </ul>
+  <h2 class="text-2xl font-bold text-left">Personal work</h2>
+  <ul class="flex flex-wrap justify-center md:justify-start gap-5 py-10">
+    {
+      personals.map((post) => {
+        return (
+          <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
+            <PostListItem
+              id={post.id}
+              title={post.data.title}
+              icon={post.data.icon}
+              pubDate={post.data.pubDate}
+              description={post.data.description}
+            />
           </li>
         );
       })

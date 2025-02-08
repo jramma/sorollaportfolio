@@ -1,0 +1,12 @@
+---
+import { Icon } from "astro-icon/components";
+const { href, iconName, bgColor = "bg-pblue" } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class=`border-1 p-1 border-black rounded-full ${bgColor} shadow-card hover:shadow-hover transition`
+>
+  <Icon name={iconName} />
+</a>

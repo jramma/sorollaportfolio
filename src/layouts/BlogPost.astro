@@ -5,7 +5,7 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
 import { Icon } from "astro-icon/components";
-
+import { getRandomClass } from "src/tool";
 type Props = CollectionEntry<"blog">["data"];
 
 const {
@@ -19,23 +19,23 @@ const {
 } = Astro.props;
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const bgClasses = [
   "hover:shadow-ppinkHover",
   "hover:shadow-pgreenHover",
   "hover:shadow-pblueHover",
   "hover:shadow-pyellow",
-
 ];
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
-if (!images[heroImage]) throw new Error(`"${heroImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
-
-const getRandomClass = () => {
-  return bgClasses[Math.floor(Math.random() * bgClasses.length)];
-};
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/*.{jpeg,jpg,png,gif}",
+);
+if (!images[heroImage])
+  throw new Error(
+    `"${heroImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+  );
 ---
 
 <html lang="en">
@@ -45,7 +45,7 @@ const getRandomClass = () => {
   <body>
     <Header />
     <main class="container mx-auto md:px-10 text-white">
-      <article >
+      <article>
         <div class="relative mb-20" transition:animate="fade">
           <span class="bg-black bg-opacity-25 w-full h-full absolute"></span>
           <div class="absolute bottom-10 md:left-20 left-6">
@@ -54,9 +54,13 @@ const getRandomClass = () => {
                 title.slice(1)
               }
             </h1>
-            <p  set:html={description} />
+            <p set:html={description} />
           </div>
-          <Image src={images[heroImage]()}  alt={title} class="h-96 w-full object-cover"/>
+          <Image
+            src={images[heroImage]()}
+            alt={title}
+            class="h-96 w-full object-cover"
+          />
         </div>
         <div class="text-black px-6 md:px-0">
           <div class="">
@@ -79,16 +83,18 @@ const getRandomClass = () => {
               <slot />
             </div>
             <div class="flex flex-col gap-6" transition:animate="slide">
-              <ul class="flex flex-col gap-2 pt-10 md:pt-0 items-start md:items-end">
+              <ul
+                class="flex flex-col gap-2 pt-10 md:pt-0 items-start md:items-end"
+              >
                 <p class="md:hidden font-semibold">Related:</p>
                 {
                   posts.map((post) => {
                     return (
-                      <li class=`text-left rounded-lg border-1 border-black shadow-card group hover:shadow-hover transition  px-2 py-2 ${getRandomClass()}` >
-                        <a
-                          href={`/blog/${post.id}/`}
-                        >
-                          <h4 >{post.data.title}</h4>
+                      <li
+                        class={`text-left rounded-lg border-1 border-black shadow-card group hover:shadow-hover transition  px-2 py-2 ${getRandomClass(bgClasses)}`}
+                      >
+                        <a href={`/blog/${post.id}/`}>
+                          <h4>{post.data.title}</h4>
                         </a>
                       </li>
                     );
@@ -98,18 +104,20 @@ const getRandomClass = () => {
               <hr />
               <p>Written by</p>
               <div class="flex -mt-4 gap-2">
-                  <div class="bg-pgreen w-10 h-10 aspect-square object-contain overflow-hidden ">
-                    <Image src={images["/src/assets/author.png"]()} alt="Fran" />
-                  </div>
-                  <div>
+                <div
+                  class="bg-pgreen w-10 h-10 aspect-square object-contain overflow-hidden"
+                >
+                  <Image src={images["/src/assets/author.png"]()} alt="Fran" />
+                </div>
+                <div>
                   <h3>Sherman Liu</h3>
                   <p class="text-pblack">An indie developer</p>
                 </div>
               </div>
-              <hr/>
+              <hr />
               <div>
-                <p>Contributors:</p>
-                <div class="flex items-center gap-6 text-xl">
+                <!-- <p>Contributors:</p> -->
+                <!-- <div class="flex items-center gap-6 text-xl">
                   <a
                     href="https://github.com/mooonpark"
                     target="_blank"
@@ -130,14 +138,14 @@ const getRandomClass = () => {
                     class="border-1 p-1 border-black rounded-full bg-pgreen shadow-card hover:shadow-hover transition"
                   >
                     <Icon name="linkedin" />
-                  </a>
-                </div>
+                  </a> -->
               </div>
             </div>
           </div>
         </div>
       </article>
     </main>
+
     <Footer />
   </body>
 </html>

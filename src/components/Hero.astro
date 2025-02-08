@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import LinkButton from "./LinkButton.astro";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
@@ -15,53 +16,41 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     </p>
     <p>
       I worked as a backend software engineer in China for 6 years. Now I am
-      studying Interactive Media Design at Algonquin College. I am exploring how
-      to become an independent developer.
+      studying Interactive Media Design at Algonquin College and I am exploring
+      how to become an independent developer.
     </p>
     <!-- replace to linkin -->
-    <a
-      rel="noopener noreferrer"
-      href="/about"
-      class="bg-pgreen px-5 py-3 border-1 border-black rounded-lg shadow-card hover:shadow-hover transition"
-    >
-      Work together
-    </a>
+    <LinkButton href="/about" title="Work together" />
   </div>
   <div
-    class="md:w-1/2 object-contain flex items-center justify-center p-10 group"
+    class="md:w-1/2 object-contain flex items-center justify-center p-10 group min-h-[400px]"
   >
-    <a
-      rel="noopener noreferrer"
-      href="https://es.wikipedia.org/wiki/Joaqu%C3%ADn_Sorolla"
-      target="_blank"
+    <div
+      class="bg-pblue border-3 border-black rounded-2xl h-52 w-60 shadow-card group-hover:shadow-hover flex transition relative"
     >
       <div
-        class="bg-pblue border-3 border-black rounded-2xl h-52 w-60 shadow-card group-hover:shadow-hover flex transition relative"
+        class="absolute -top-8 -left-12 text-5xl bg-purple-300 px-5 py-1 z-10 shadow-card group-hover:shadow-hover transition rounded-t-2xl border-3 border-black rounded-bl-2xl rounded-br-sm"
       >
-        <div
-          class="absolute -top-8 -left-12 text-5xl bg-purple-300 px-5 py-1 z-10 shadow-card group-hover:shadow-hover transition rounded-t-2xl border-3 border-black rounded-bl-2xl rounded-br-sm"
-        >
-          <Icon name="blog" />
-        </div>
-        <div
-          class="absolute top-16 -right-16 text-5xl bg-pyellow p-2 z-10 shadow-card group-hover:shadow-hover transition rounded-full border-3 border-black"
-        >
-          <Icon name="beach" />
-        </div>
-        <div
-          class="absolute text-nowrap flex items-center gap-4 -bottom-12 right-0 pr-4 bg-pgreen pl-1 z-10 shadow-card1 group-hover:shadow-card transition rounded-full border-3 border-black"
-        >
-          <Icon name="beach" />
-          <p>Sherman Liu</p>
-        </div>
-        <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
-          <Image
-            class="object-bottom absolute bottom-0 group-hover:scale-105 transition"
-            src={images["/src/assets/selfie.jpg"]()}
-            alt="Sorolla, photo wiki"
-          />
-        </div>
-      </div></a
-    >
+        <Icon name="blog" />
+      </div>
+      <div
+        class="absolute top-16 -right-16 text-5xl bg-pyellow p-2 z-10 shadow-card group-hover:shadow-hover transition rounded-full border-3 border-black"
+      >
+        <Icon name="beach" />
+      </div>
+      <div
+        class="absolute text-nowrap flex items-center gap-4 -bottom-14 right-0 pr-4 bg-pgreen pl-1 z-10 shadow-card1 group-hover:shadow-card transition rounded-full border-3 border-black"
+      >
+        <Icon name="beach" />
+        <p>Sherman Liu</p>
+      </div>
+      <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
+        <Image
+          class="object-bottom absolute bottom-0 group-hover:scale-105 transition rounded-lg"
+          src={images["/src/assets/selfie.jpg"]()}
+          alt="a man sitting on a chair in the park and smiling"
+        />
+      </div>
+    </div>
   </div>
 </section>

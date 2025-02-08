@@ -1,34 +1,27 @@
 ---
 const today = new Date();
-import { Icon } from "astro-icon/components";
+import SocialLink from "./SocialLink.astro";
 ---
 
 <footer
-  class="flex flex-col items-center container mx-auto p-10 text-center gap-10 pb-40"
+  class="flex flex-col items-center container mx-auto p-20 text-center gap-10 pb-40"
 >
-  &copy; {today.getFullYear()} Your name here. All rights reserved.
+  &copy; {today.getFullYear()} Sherman Liu. All rights reserved.
   <div class="flex items-center gap-6 text-5xl">
-    <a
+    <SocialLink
       href="https://github.com/mooonpark"
-      target="_blank"
-      class="border-1 p-1 border-black rounded-full bg-pblue shadow-card hover:shadow-hover transition"
-    >
-      <Icon name="github" />
-    </a>
-
-    <a
+      iconName="github"
+      bgColor="bg-pblue"
+    />
+    <SocialLink
       href="https://www.instagram.com/shermanliu2048/"
-      target="_blank"
-      class="py-1 px-1 rounded-md border-1 border-black bg-ppink shadow-card hover:shadow-hover transition"
-    >
-      <Icon name="ins" />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/jramma/"
-      target="_blank"
-      class="border-1 p-1 border-black rounded-full bg-pgreen shadow-card hover:shadow-hover transition"
-    >
-      <Icon name="linkedin" />
-    </a>
+      iconName="ins"
+      bgColor="bg-ppink"
+    />
+    <SocialLink
+      href="https://github.com/mooonpark"
+      iconName="linkedin"
+      bgColor="bg-pgreen"
+    />
   </div>
 </footer>

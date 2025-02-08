@@ -1,0 +1,11 @@
+---
+const { href, title, bgColor = "bg-pgreen" } = Astro.props;
+---
+
+<a
+  rel="noopener noreferrer"
+  href={href}
+  class=`${bgColor} px-5 py-3 border-1 border-black rounded-lg shadow-card hover:shadow-hover transition`
+>
+  {title}
+</a>

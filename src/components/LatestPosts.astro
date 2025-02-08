@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import PostListItem from "./PostListItem.astro";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const latestPosts = posts.slice(0, 8);
+---
+
+<section class="flex flex-col text-center gap-1">
+  <h2 class="text-2xl font-bold text-left">Recent work</h2>
+  <ul class="flex flex-wrap justify-center md:justify-start gap-5 py-10">
+    {
+      latestPosts.map((post) => {
+        return (
+          <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
+            <PostListItem
+              id={post.id}
+              title={post.data.title}
+              icon={post.data.icon}
+              pubDate={post.data.pubDate}
+              description={post.data.description}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
