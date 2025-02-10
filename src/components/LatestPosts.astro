@@ -5,7 +5,7 @@ import PostListItem from "./PostListItem.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-const latestPosts = posts.slice(0, 8);
+const latestPosts = posts.slice(0, 12);
 ---
 
 <section class="flex flex-col text-center gap-1">
