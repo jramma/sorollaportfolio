@@ -1,8 +1,6 @@
 # 🌐 Personal Portfolio
 
-Welcome to my personal portfolio demo repository! This project is a demonstration of what a personal portfolio could look like. It showcases various aspects of web development, including my work, skills, and projects.
-
-You can view the deployed project at the following URL: [https://astounding-bienenstitch-9b7a58.netlify.app/](https://astounding-bienenstitch-9b7a58.netlify.app/)
+Welcome to my personal portfolio repository! This project is a demonstration of what a personal portfolio could look like. It showcases various aspects of web development, including my work, skills, and projects.
 
 ## 📂 Project Structure
 
@@ -14,7 +12,6 @@ You can view the deployed project at the following URL: [https://astounding-bien
 - **tailwind.config.mjs**: Configuration file for Tailwind CSS.
 - **tsconfig.json**: TypeScript configuration file.
 
-
 ### 🧭 /src structure
 
 The `/src` directory contains the main source code for the project. Below is an overview of its structure:
@@ -22,10 +19,6 @@ The `/src` directory contains the main source code for the project. Below is an 
 ```
 src
 ├── assets
-│   ├── adriana.jpg
-│   ├── euro.jpg
-│   ├── fran.jpg
-│   └── hero.png
 ├── components
 │   ├── BaseHead.astro
 │   ├── Footer.astro
@@ -40,16 +33,6 @@ src
 │       └── content in markdown format
 ├── content.config.ts
 ├── icons
-│   ├── 1.svg
-│   ├── 2.svg
-│   ├── 3.svg
-│   ├── 4.svg
-│   ├── 5.svg
-│   ├── beach.svg
-│   ├── github.svg
-│   ├── linkedin.svg
-│   ├── paint.svg
-│   └── web.svg
 ├── layouts
 │   └── BlogPost.astro
 ├── pages
@@ -82,28 +65,22 @@ src
 
 This structure helps in organizing the project files and makes it easier to maintain and scale the project.
 
-
 ## 🚀 Getting Started
 
 To run this project locally:
 
 1. **Clone the repository:**
 
-   ```bash
-   git clone https://github.com/jramma/sorollaportfolio.git
-   cd sorollaportfolio
-   ```
-
 2. **Install dependencies:**
 
    ```bash
-   bun install
+   npm install
    ```
 
 3. **Start the development server:**
 
    ```bash
-   bun dev
+   npm run dev
    ```
 
    The application will be available at `http://localhost:4321`.
