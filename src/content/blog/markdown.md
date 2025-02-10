@@ -2,7 +2,7 @@
 title: "Markdown example"
 description: 'This example is from <a class="underline" target="_blank" href="https://markdown-it.github.io/">Github</a>'
 icon: "1"
-pubDate: "Feb 08 2025"
+pubDate: "Feb 07 2025"
 heroImage: "/src/assets/liu.jpg"
 ---
 
