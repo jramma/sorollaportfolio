@@ -6,7 +6,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Black.woff2') format('woff2'),
-         url('/fonts/Alexandria-Black.woff') format('woff');
+        url('/fonts/Alexandria-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
@@ -14,7 +14,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Bold.woff2') format('woff2'),
-         url('/fonts/Alexandria-Bold.woff') format('woff');
+        url('/fonts/Alexandria-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -22,7 +22,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-ExtraBold.woff2') format('woff2'),
-         url('/fonts/Alexandria-ExtraBold.woff') format('woff');
+        url('/fonts/Alexandria-ExtraBold.woff') format('woff');
     font-weight: 800;
     font-style: normal;
 }
@@ -30,7 +30,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-ExtraLight.woff2') format('woff2'),
-         url('/fonts/Alexandria-ExtraLight.woff') format('woff');
+        url('/fonts/Alexandria-ExtraLight.woff') format('woff');
     font-weight: 200;
     font-style: normal;
 }
@@ -38,7 +38,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Light.woff2') format('woff2'),
-         url('/fonts/Alexandria-Light.woff') format('woff');
+        url('/fonts/Alexandria-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
@@ -46,7 +46,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Medium.woff2') format('woff2'),
-         url('/fonts/Alexandria-Medium.woff') format('woff');
+        url('/fonts/Alexandria-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
@@ -54,7 +54,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Regular.woff2') format('woff2'),
-         url('/fonts/Alexandria-Regular.woff') format('woff');
+        url('/fonts/Alexandria-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
@@ -62,7 +62,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-SemiBold.woff2') format('woff2'),
-         url('/fonts/Alexandria-SemiBold.woff') format('woff');
+        url('/fonts/Alexandria-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
 }
@@ -70,7 +70,7 @@
 @font-face {
     font-family: 'Alexandria';
     src: url('/fonts/Alexandria-Thin.woff2') format('woff2'),
-         url('/fonts/Alexandria-Thin.woff') format('woff');
+        url('/fonts/Alexandria-Thin.woff') format('woff');
     font-weight: 100;
     font-style: normal;
 }
@@ -78,10 +78,22 @@
 @font-face {
     font-family: 'Kablammo';
     src: url('/fonts/Kablammo-Regular.woff2') format('woff2'),
-         url('/fonts/Kablammo-Regular.woff') format('woff');
+        url('/fonts/Kablammo-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+
+@layer components {
+    .post-list {
+        @apply flex flex-wrap justify-center md:justify-start gap-5 py-10;
+    }
+
+    .post-card {
+        @apply w-72 text-left rounded-3xl border border-black shadow-card transition px-4 py-6 flex flex-col gap-6;
+    }
+}
+
 body {
     font-family: 'Alexandria', sans-serif;
     background-color: #f2f2f2;
