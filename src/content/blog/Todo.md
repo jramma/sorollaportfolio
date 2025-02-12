@@ -13,7 +13,7 @@ heroImage: "/src/assets/liu.jpg"
 - [x] Custom home page
 - [x] Change website title color
 - [x] Group blog by tag
-- [ ] Change blogicon
+- [x] Change blogicon
 - [ ] Figure out what is mdx
 - [ ] Change font
 - [ ] Write Blog
@@ -23,6 +23,7 @@ heroImage: "/src/assets/liu.jpg"
   - [ ] Nike website demo
   - [ ] Math website demo
   - [ ] Dashboard website demo
+  - [ ] Canvas
   - [ ] React Native
     - [ ] Budget
     - [ ] Music
