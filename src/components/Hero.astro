@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import LinkButton from "./LinkButton.astro";
+
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
@@ -31,12 +32,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <div
         class="absolute -top-8 -left-12 text-5xl bg-purple-300 px-5 py-1 z-10 shadow-card group-hover:shadow-hover transition rounded-t-2xl border-3 border-black rounded-bl-2xl rounded-br-sm"
       >
-        <Icon name="planet7" />
+        <Icon name="planet/planet7" />
       </div>
       <div
         class="absolute top-16 -right-16 text-5xl bg-pyellow p-2 z-10 shadow-card group-hover:shadow-hover transition rounded-full border-3 border-black"
       >
-        <Icon name="alienship2" />
+        <Icon name="space/alienship2" />
       </div>
       <div
         class="absolute text-nowrap flex items-center gap-4 -bottom-14 right-0 px-2 bg-pgreen z-10 shadow-card1 group-hover:shadow-card transition rounded-full border-3 border-black"

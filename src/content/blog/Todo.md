@@ -1,7 +1,6 @@
 ---
 title: "Todo"
 description: "Todo list of the website"
-icon: "alien5"
 pubDate: "Feb 08 2025"
 heroImage: "/src/assets/liu.jpg"
 ---

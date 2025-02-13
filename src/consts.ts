@@ -3,19 +3,8 @@
 
 export const SITE_TITLE = "Sherman";
 export const SITE_DESCRIPTION = "Welcome to my website!";
-// export const ICON_COLORS = [
-//   "bg-[#98473e] rounded-full",
-//   "bg-[#7FC6A4] rounded-2xl",
-//   "bg-[#C3ACCE] rounded-sm",
-//   "bg-[#592E83] rounded-md",
-//   "bg-[#656839] rounded-md",
-//   "bg-[#FF9000]",
-//   "bg-[#FFDC5E] rounded-3xl",
-//   "bg-[#5448C8] rounded-xl",
-// ];
 
 export const ICON_COLORS = [
-  // "bg-[#adf296] rounded-full",
   "bg-[#d8b4fe] rounded-2xl",
   "bg-[#96c7f2] rounded-md",
   "bg-[#f396e5] rounded-sm",

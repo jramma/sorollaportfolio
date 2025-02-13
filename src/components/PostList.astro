@@ -1,6 +1,7 @@
 ---
 import PostListItem from "./PostListItem.astro";
 import { type CollectionEntry } from "astro:content";
+import { getRandomIcon } from "src/tool";
 
 type Post = CollectionEntry<"blog">;
 
@@ -18,7 +19,7 @@ const { posts, title } = Astro.props as { posts: Post[]; title: string };
             <PostListItem
               id={post.id}
               title={post.data.title}
-              icon={post.data.icon}
+              icon={getRandomIcon("alien")}
               pubDate={post.data.pubDate}
               description={post.data.description}
             />
