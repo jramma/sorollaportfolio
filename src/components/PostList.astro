@@ -1,0 +1,30 @@
+---
+import PostListItem from "./PostListItem.astro";
+import { type CollectionEntry } from "astro:content";
+
+type Post = CollectionEntry<"blog">;
+
+const { posts, title } = Astro.props as { posts: Post[]; title: string };
+---
+
+<section class="flex flex-col text-center gap-1">
+  <h2 class="text-2xl font-bold text-left">{title}</h2>
+
+  <ul class="post-list">
+    {
+      posts.map((post) => {
+        return (
+          <li class="post-card group hover:shadow-hover">
+            <PostListItem
+              id={post.id}
+              title={post.data.title}
+              icon={post.data.icon}
+              pubDate={post.data.pubDate}
+              description={post.data.description}
+            />
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

@@ -1,30 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import PostListItem from "./PostListItem.astro";
-
+import PostList from "./PostList.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const latestPosts = posts.slice(0, 12);
 ---
 
-<section class="flex flex-col text-center gap-1">
-  <h2 class="text-2xl font-bold text-left">Recent work</h2>
-  <ul class="post-list">
-    {
-      latestPosts.map((post) => {
-        return (
-          <li class="post-card group hover:shadow-hover">
-            <PostListItem
-              id={post.id}
-              title={post.data.title}
-              icon={post.data.icon}
-              pubDate={post.data.pubDate}
-              description={post.data.description}
-            />
-          </li>
-        );
-      })
-    }
-  </ul>
-</section>
+<PostList posts={latestPosts} , title="Recent work" />
