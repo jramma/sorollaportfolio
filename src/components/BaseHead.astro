@@ -2,7 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-// import Analytics from "@vercel/analytics/astro";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
@@ -97,9 +97,10 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 <link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="/favicon/apple-touch-icon.png"
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="/favicon/favicon-96x96.png"
 />
 <link
   rel="icon"
@@ -128,3 +129,4 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<Analytics />
