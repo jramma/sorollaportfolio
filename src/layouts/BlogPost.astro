@@ -1,4 +1,6 @@
 ---
+import { Analytics } from "@vercel/analytics/next";
+
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
@@ -29,7 +31,7 @@ const bgClasses = [
 ];
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import SocialLink from "@/components/SocialLink.astro";
+// import SocialLink from "@/components/SocialLink.astro";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
@@ -143,5 +145,6 @@ if (!images[heroImage])
     </main>
 
     <Footer />
+    <Analytics />
   </body>
 </html>
