@@ -2,6 +2,7 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title: string;
@@ -19,28 +20,100 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href="/fonts/Alexandria-Bold.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-Bold.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-Light.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-Light.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-Regular.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-Regular.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/Alexandria-SemiBold.woff" as="font" type="font/woff" crossorigin />
-<link rel="preload" href="/fonts/Kablammo-Regular.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/Kablammo-Regular.woff" as="font" type="font/woff" crossorigin />
-
-
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Bold.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Bold.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Light.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Light.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-Regular.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-SemiBold.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Alexandria-SemiBold.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Kablammo-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="/fonts/Kablammo-Regular.woff"
+  as="font"
+  type="font/woff"
+  crossorigin
+/>
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
 <ClientRouter />
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-<link rel="manifest" href="/favicon/site.webmanifest">
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/favicon/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="/favicon/favicon-32x32.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="/favicon/favicon-16x16.png"
+/>
+<link rel="manifest" href="/favicon/site.webmanifest" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
@@ -55,3 +128,4 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<Analytics />
