@@ -5,15 +5,16 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 import icon from "astro-icon";
-import vercel from "@astrojs/vercel";
+// import vercel from "@astrojs/vercel";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  output: "static",
   integrations: [mdx(), sitemap(), tailwind(), icon()],
-  adapter: vercel({
+  site: "https://shermanecho.vercel.app",
+  /*adapter: vercel({
     webAnalytics: {
       enabled: true, // set to false when using @vercel/analytics@1.4.0
     },
-  }),
+  }),*/
 });

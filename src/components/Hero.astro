@@ -3,9 +3,10 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import LinkButton from "./LinkButton.astro";
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}",
-);
+// const images = import.meta.glob<{ default: ImageMetadata }>(
+//   "/src/assets/*.{jpeg,jpg,png,gif}",
+// );
+import HeroImage from "@/assets/selfie.jpg";
 ---
 
 <section class="py-20 flex md:flex-row flex-col px-4 md:px-0 gap-10 md:gap-0">
@@ -48,7 +49,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
       <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
         <Image
           class="object-bottom absolute bottom-0 group-hover:scale-105 transition rounded-lg"
-          src={images["/src/assets/selfie.jpg"]()}
+          src={HeroImage}
           alt="a man sitting on a chair in the park and smiling"
         />
       </div>
