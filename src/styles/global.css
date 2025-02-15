@@ -6,7 +6,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --shadow-card1: 2px 2px #000000;
+  --shadow-card-sm: 2px 2px #000000;
   --shadow-card: 4px 4px #000000;
   --shadow-hover: 7px 7px #000000;
   --shadow-pblue: 7px 7px #96c7f2;
@@ -14,11 +14,11 @@
   --shadow-ppink: 7px 7px #f396e5;
   --shadow-pyellow: 7px 7px #f2cf96;
   --shadow-ppurlple: 7px 7px #9d859a;
-  --shadow-pblue-hover: 9px 9px #96c7f2;
+  /* --shadow-pblue-hover: 9px 9px #96c7f2;
   --shadow-pgreen-hover: 9px 9px #adf296;
   --shadow-ppink-hover: 9px 9px #f396e5;
   --shadow-pyellow-hover: 9px 9px #f2cf96;
-  --shadow-ppurlple-hover: 9px 9px #9d859a;
+  --shadow-ppurlple-hover: 9px 9px #9d859a; */
 
   --color-pblue: #96c7f2;
   --color-pgreen: #adf296;
