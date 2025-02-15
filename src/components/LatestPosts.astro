@@ -8,7 +8,7 @@ const posts = (await getCollection("blog")).sort(
 const latestPosts = posts.slice(0, 12);
 ---
 
-<PostList posts={latestPosts} , title="Recent work" />
+<PostList posts={latestPosts} title="Recent work" />
 <section class="px-4 pt-2 md:px-0 md:gap-0 text-center md:text-left">
   <LinkButton href="/blog" title="Read more" />
 </section>
