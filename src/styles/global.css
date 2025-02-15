@@ -1,33 +1,102 @@
 /* The integration's default injected base.css file */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@font-face {
-    font-family: 'Alexandria';
-    src: url('/fonts/Alexandria.ttf') format('truetype'), local(Alexandria);
-    font-style: normal;
-    font-display: swap;
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --shadow-card1: 2px 2px #000000;
+  --shadow-card: 4px 4px #000000;
+  --shadow-hover: 10px 10px #000000;
+  --shadow-pblue: 7px 7px #96c7f2;
+  --shadow-pgreen: 7px 7px #adf296;
+  --shadow-ppink: 7px 7px #f396e5;
+  --shadow-pblue-hover: 10px 10px #96c7f2;
+  --shadow-pgreen-hover: 10px 10px #adf296;
+  --shadow-ppink-hover: 10px 10px #f396e5;
+  --shadow-pyellow: 7px 7px #f2cf96;
+
+  --color-pblue: #96c7f2;
+  --color-pgreen: #adf296;
+  --color-ppink: #f396e5;
+  --color-pyellow: #f2cf96;
+  --color-ppurlple: #9d859a;
+  --color-pblack: #4e6273;
+
+  --color-white: #f2f2f2;
+
+  --font-mono: Alexandria, monospace;
+  --font-sans: Alexandria, sans-serif;
+  --font-kablamo: Kablammo, serif;
+
+  --container-1\/12: 8.333333%;
+  --container-2\/12: 16.666667%;
+  --container-3\/12: 25%;
+  --container-4\/12: 33.333333%;
+  --container-5\/12: 41.666667%;
+  --container-6\/12: 50%;
+  --container-7\/12: 58.333333%;
+  --container-8\/12: 66.666667%;
+  --container-9\/12: 75%;
+  --container-10\/12: 91.666667%;
+  --container-12\/12: 100%;
+
+  --margin-30: 7.3rem;
+
+  --border-width-1: 1px;
+  --border-width-3: 3px;
+
+  --border-color-black: #000;
+  --border-color-black-rad: rgba(0, 0, 0, 0.8);
+  --border-color-white-rad: rgba(242, 242, 242, 0.8);
 }
 
-@font-face {
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@utility post-list {
+  @apply flex flex-wrap justify-center md:justify-start gap-5 py-10;
+}
+
+@utility post-card {
+  @apply w-72 text-left rounded-3xl border border-black shadow-card transition px-4 py-6 flex flex-col gap-6;
+}
+
+@layer utilities {
+  @font-face {
+    font-family: 'Alexandria';
+    src:
+      url('/fonts/Alexandria.ttf') format('truetype'),
+      local(Alexandria);
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
     font-family: 'Kablammo';
-    src: url('/fonts/Kablammo-Regular.woff2') format('woff2'),
-        url('/fonts/Kablammo-Regular.woff') format('woff');
+    src:
+      url('/fonts/Kablammo-Regular.woff2') format('woff2'),
+      url('/fonts/Kablammo-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: block;
-}
-
-
-@layer components {
-    .post-list {
-        @apply flex flex-wrap justify-center md:justify-start gap-5 py-10;
-    }
-
-    .post-card {
-        @apply w-72 text-left rounded-3xl border border-black shadow-card transition px-4 py-6 flex flex-col gap-6;
-    }
+  }
 }
 
 body {
