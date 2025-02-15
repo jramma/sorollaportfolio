@@ -2,7 +2,6 @@
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
-import "../styles/hamburgers.css";
 // import Analytics from "@vercel/analytics/astro";
 
 interface Props {
@@ -11,7 +10,6 @@ interface Props {
   image?: string;
 }
 
-// import { ClientRouter } from "astro:transitions";
 const { title, description, image = "/screenshot.jpg" } = Astro.props;
 ---
 
@@ -21,43 +19,8 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<!-- Used fonts: Alexandria
-Alexandria LightAlexandria RegularAlexandria SemiBoldAlexandria Bold
-Kablammo
-Kablammo Regular -->
-<!-- <link
-  rel="preload"
-  href="/fonts/Alexandria-Bold.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/>
-
-<link
-  rel="preload"
-  href="/fonts/Alexandria-Light.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/>
-
-<link
-  rel="preload"
-  href="/fonts/Alexandria-Regular.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/> -->
-
 <link rel="preload" href="/fonts/Alexandria.ttf" as="font" crossorigin />
 
-<!-- <link
-  rel="preload"
-  href="/fonts/Alexandria-SemiBold.woff2"
-  as="font"
-  type="font/woff2"
-  crossorigin
-/> -->
 <link
   rel="preload"
   href="/fonts/Kablammo-Regular.woff2"
@@ -67,31 +30,10 @@ Kablammo Regular -->
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
-<!-- <ClientRouter /> -->
 <meta name="title" content={title} />
 <meta name="description" content={description} />
-<!-- <link
-  rel="icon"
-  type="image/png"
-  sizes="96x96"
-  href="/favicon/favicon-96x96.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="32x32"
-  href="/favicon/favicon-32x32.png"
-/>
-<link
-  rel="icon"
-  type="image/png"
-  sizes="16x16"
-  href="/favicon/favicon-16x16.png"
-/> -->
 
 <link rel="icon" href="/favicon/favicon.ico" sizes="32x32" />
-<!-- <link rel="icon" href="/icon.svg" type="image/svg+xml"> -->
-<!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png">180×180 -->
 <link rel="manifest" href="/favicon/site.webmanifest" />
 
 <!-- Open Graph / Facebook -->
