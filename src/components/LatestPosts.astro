@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import PostList from "./PostList.astro";
+import LinkButton from "@/components/LinkButton.astro";
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -8,3 +9,6 @@ const latestPosts = posts.slice(0, 12);
 ---
 
 <PostList posts={latestPosts} , title="Recent work" />
+<section class="px-4 md:px-0 gap-10 md:gap-0">
+  <LinkButton href="/blog" title="Read more" />
+</section>

@@ -8,9 +8,8 @@ type Post = CollectionEntry<"blog">;
 const { posts, title } = Astro.props as { posts: Post[]; title: string };
 ---
 
-<section class="flex flex-col text-center gap-1">
+<section class="flex flex-col px-4 md:px-0 gap-10 md:gap-0">
   <h2 class="text-2xl font-bold text-left">{title}</h2>
-
   <ul class="post-list">
     {
       posts.map((post) => {
