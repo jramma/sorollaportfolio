@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
+const {
+  title,
+  heroImage,
+  description = "",
+  color = "text-ppink",
+} = Astro.props as {
+  title: string;
+  heroImage: ImageMetadata;
+  description: string;
+  color: string;
+};
+---
+
+<div class="relative mb-20 text-white" transition:animate="fade">
+  <span class="bg-black bg-opacity-25 w-full h-full absolute"></span>
+  <div class="absolute bottom-10 md:left-20 left-6">
+    <h1 class="text-4xl md:text-9xl font-semibold text-shadow">
+      <span class=`font-kablamo ${color}`>{title.charAt(0)}</span>{
+        title.slice(1)
+      }
+    </h1>
+    {description && <p set:html={description} />}
+  </div>
+  <Image src={heroImage} alt={title} class="h-96 w-full object-cover" />
+</div>

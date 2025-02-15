@@ -12,3 +12,6 @@ export const ICON_COLORS = [
   "bg-[#F05365] rounded-2xl",
   "bg-[#D89D6A] rounded-2xl",
 ];
+
+export const IMAGE_HERO = "/src/assets/shuang.jpg";
+export const IMAGE_STONE = "/src/assets/stone.jpg";

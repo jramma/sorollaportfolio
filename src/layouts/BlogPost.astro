@@ -1,11 +1,15 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
 import BaseHead from "@/components/BaseHead.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
-import { Icon } from "astro-icon/components";
+import Banner from "@/components/Banner.astro";
+// import SocialLink from "@/components/SocialLink.astro";
 import { getRandomClass, getRandomIcon } from "src/tool";
+import { IMAGE_HERO } from "src/consts";
+
 type Props = CollectionEntry<"blog">["data"];
 
 const {
@@ -13,7 +17,7 @@ const {
   description,
   pubDate,
   updatedDate,
-  heroImage = "/shuang.jpg",
+  heroImage = IMAGE_HERO,
   tags,
   icon = getRandomIcon("alien"),
 } = Astro.props;
@@ -29,7 +33,6 @@ const bgClasses = [
 ];
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-// import SocialLink from "@/components/SocialLink.astro";
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "/src/assets/*.{jpeg,jpg,png,gif}",
 );
@@ -47,22 +50,11 @@ if (!images[heroImage])
     <Header />
     <main class="container mx-auto md:px-10 text-white">
       <article>
-        <div class="relative mb-20" transition:animate="fade">
-          <span class="bg-black bg-opacity-25 w-full h-full absolute"></span>
-          <div class="absolute bottom-10 md:left-20 left-6">
-            <h1 class="text-4xl md:text-9xl font-semibold text-shadow">
-              <span class="font-kablamo text-ppink">{title.charAt(0)}</span>{
-                title.slice(1)
-              }
-            </h1>
-            <p set:html={description} />
-          </div>
-          <Image
-            src={images[heroImage]()}
-            alt={title}
-            class="h-96 w-full object-cover"
-          />
-        </div>
+        <Banner
+          title={title}
+          description={description}
+          heroImage={images[heroImage]()}
+        />
         <div class="text-black px-6 md:px-0">
           <div class="">
             <div class="text-sm text-pblack flex items-center justify-between">
