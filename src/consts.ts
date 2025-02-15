@@ -4,6 +4,7 @@
 export const SITE_TITLE = "Sherman";
 export const SITE_DESCRIPTION = "Welcome to my website!";
 
+// TODO use color from global css
 export const ICON_COLORS = [
   "bg-[#d8b4fe] rounded-2xl",
   "bg-[#96c7f2] rounded-md",

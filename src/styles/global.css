@@ -10,12 +10,15 @@
   --shadow-card: 4px 4px #000000;
   --shadow-hover: 10px 10px #000000;
   --shadow-pblue: 7px 7px #96c7f2;
-  --shadow-pgreen: 7px 7px #adf296;
+  --shadow-green: 7px 7px #adf296;
   --shadow-ppink: 7px 7px #f396e5;
-  --shadow-pblue-hover: 10px 10px #96c7f2;
-  --shadow-pgreen-hover: 10px 10px #adf296;
-  --shadow-ppink-hover: 10px 10px #f396e5;
   --shadow-pyellow: 7px 7px #f2cf96;
+  --shadow-ppurlple: 7px 7px #9d859a;
+  --shadow-pblue-hover: 9px 9px #96c7f2;
+  --shadow-pgreen-hover: 9px 9px #adf296;
+  --shadow-ppink-hover: 9px 9px #f396e5;
+  --shadow-pyellow-hover: 9px 9px #f2cf96;
+  --shadow-ppurlple-hover: 9px 9px #9d859a;
 
   --color-pblue: #96c7f2;
   --color-pgreen: #adf296;
@@ -61,6 +64,7 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -70,13 +74,9 @@
   }
 }
 
-@utility post-list {
+/* @utility post-list {
   @apply flex flex-wrap justify-center md:justify-start gap-5 py-10;
-}
-
-@utility post-card {
-  @apply w-72 text-left rounded-3xl border border-black shadow-card transition px-4 py-6 flex flex-col gap-6;
-}
+} */
 
 @layer utilities {
   @font-face {
@@ -100,6 +100,6 @@
 }
 
 body {
-    font-family: 'Alexandria', sans-serif;
-    background-color: #f2f2f2;
+  font-family: 'Alexandria', sans-serif;
+  background-color: #f2f2f2;
 }

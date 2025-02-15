@@ -26,10 +26,11 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const bgClasses = [
-  "hover:shadow-ppinkHover",
-  "hover:shadow-pgreenHover",
-  "hover:shadow-pblueHover",
-  "hover:shadow-pyellow",
+  "hover:shadow-ppink-hover",
+  "hover:shadow-pgreen-hover",
+  "hover:shadow-pblue-hover",
+  "hover:shadow-pyellow-hover",
+  "hover:shadow-ppurlple-hover",
 ];
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
