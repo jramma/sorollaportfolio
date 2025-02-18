@@ -7,9 +7,9 @@ heroImage: "/src/assets/shuang.jpg"
 
 ## Optimize website
 
-- [ ] create right favicon
-- [x] remove unused fonts
-- [x] update tailwind to 4
+- [x] Create right favicon
+- [x] Remove unused fonts
+- [x] Update tailwind to 4
 - [x] Change favicon
 - [x] Find color for the blog
 - [x] Change about me page
@@ -18,7 +18,7 @@ heroImage: "/src/assets/shuang.jpg"
 - [x] Change website title color
 - [x] Group blog by tag
 - [x] Change blogicon
-- [ ] Change font
+- [x] Change font
 - [x] Recent work add left padding for mobile
 - [x] Config Eslint
 
