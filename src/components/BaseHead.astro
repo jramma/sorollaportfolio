@@ -20,14 +20,13 @@ const { title, description, image = "/screenshot.jpg" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link rel="preload" href="/fonts/Alexandria.ttf" as="font" crossorigin />
-
 <link
   rel="preload"
   href="/fonts/Kablammo-Regular.woff2"
   as="font"
   crossorigin
 />
+<link rel="preload" href="/fonts/JetBrainsMono.ttf" as="font" crossorigin />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

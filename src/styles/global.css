@@ -29,8 +29,6 @@
 
   --color-white: #f2f2f2;
 
-  --font-mono: Alexandria, monospace;
-  --font-sans: Alexandria, sans-serif;
   --font-kablamo: Kablammo, serif;
 
   --container-1\/12: 8.333333%;
@@ -79,14 +77,6 @@
 } */
 
 @layer utilities {
-  @font-face {
-    font-family: 'Alexandria';
-    src:
-      url('/fonts/Alexandria.ttf') format('truetype'),
-      local(Alexandria);
-    font-style: normal;
-    font-display: swap;
-  }
 
   @font-face {
     font-family: 'Kablammo';
@@ -97,9 +87,19 @@
     font-style: normal;
     font-display: block;
   }
+
+  @font-face {
+    font-family: 'JetBrainsMono';
+    src:
+      url('/fonts/JetBrainsMono.ttf') format('truetype'),
+      local(JetBrainsMono);
+    font-weight: normal;
+    font-display: swap;
+  }
+
 }
 
 body {
-  font-family: 'Alexandria', sans-serif;
+  font-family: 'JetBrainsMono', sans-serif;
   background-color: #f2f2f2;
 }
