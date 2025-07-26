@@ -5,7 +5,7 @@ pubDate: "Feb 08 2025"
 heroImage: "/src/assets/shuang.jpg"
 tags: ["algonquin"]
 ---
-# My Web Midterm Project: [Lone Starfish Homepage]
+# Lone Starfish Website
 
 ## Overview
 For the midterm project, I built a single-page website to practice structuring a website with semantic HTML and custom CSS styling. This project helped me learn how to create a clear layout with a header, navigation, main content sections, form, and a footer while applying consistent design.
@@ -15,7 +15,7 @@ For the midterm project, I built a single-page website to practice structuring a
 
 [🧑‍💻 View the Code Here](https://github.com/liu00701/liu00701.github.io/tree/main/midterm)
 
-![Screenshot of Website](/src/assets/blog/screenshot-lone-starfish.jpg)
+![Screenshot of Website](/images/screenshot-lone-starfish.jpg)
 
 ## Technologies Used
 - HTML

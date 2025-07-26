@@ -103,3 +103,8 @@ body {
   font-family: 'JetBrainsMono', sans-serif;
   background-color: #f2f2f2;
 }
+
+* {
+  margin-top: 0.3rem !important;
+  margin-bottom: 0.3rem !important;
+}

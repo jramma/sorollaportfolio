@@ -72,15 +72,15 @@ if (!images[heroImage])
 
             <hr />
           </div>
-          <div class="flex justify-between py-10 md:flex-row flex-col">
-            <div class="prose md:w-1/2 flex flex-col gap-2">
-              <slot />
+          <div class="flex justify-between py-10 lg:flex-row flex-col">
+            <div class="prose lg:prose-lg lg:max-w-none lg:w-3/4 flex flex-col gap-2">
+            <slot />
             </div>
             <div class="flex flex-col gap-6" transition:animate="slide">
               <ul
-                class="flex flex-col gap-2 pt-10 md:pt-0 items-start md:items-end"
+                class="flex flex-col gap-2 pt-10 lg:pt-0 items-start lg:items-end"
               >
-                <p class="md:hidden font-semibold">Related:</p>
+                <p class="lg:hidden font-semibold">Related:</p>
                 {
                   posts.map((post) => {
                     return (
