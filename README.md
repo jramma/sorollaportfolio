@@ -9,7 +9,6 @@ Welcome to my personal portfolio repository! This project is a demonstration of 
 - **.gitignore**: Specifies files and directories to be ignored by Git.
 - **astro.config.mjs**: Configuration file for Astro.
 - **package.json**: Lists project dependencies and scripts.
-- **tailwind.config.mjs**: Configuration file for Tailwind CSS.
 - **tsconfig.json**: TypeScript configuration file.
 
 ### 🧭 /src structure
