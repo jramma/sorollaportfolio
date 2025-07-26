@@ -6,7 +6,6 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import FormattedDate from "@/components/FormattedDate.astro";
 import Banner from "@/components/Banner.astro";
-// import SocialLink from "@/components/SocialLink.astro";
 import { getRandomClass, getRandomIcon } from "src/tool";
 import { IMAGE_HERO } from "src/consts";
 
@@ -73,7 +72,7 @@ if (!images[heroImage])
             <hr />
           </div>
           <div class="flex justify-between py-10 lg:flex-row flex-col">
-            <div class="prose lg:prose-lg lg:max-w-none lg:w-3/4 flex flex-col gap-2">
+            <div class="prose lg:prose-lg max-w-none lg:w-3/4 lg:prose-headings:mt-0">
             <slot />
             </div>
             <div class="flex flex-col gap-6" transition:animate="slide">
@@ -109,26 +108,6 @@ if (!images[heroImage])
                 </div>
               </div>
               <hr />
-              <!-- <div>
-                <p>Contributors:</p>
-                <div class="flex items-center gap-6 text-xl">
-                  <SocialLink
-                    href="https://github.com/mooonpark"
-                    iconName="sociallink/github"
-                    bgColor="bg-pblue"
-                  />
-                  <SocialLink
-                    href="https://www.instagram.com/shermanliu2048/"
-                    iconName="sociallink/ins"
-                    bgColor="bg-ppink"
-                  />
-                  <SocialLink
-                    href="https://github.com/mooonpark"
-                    iconName="sociallink/linkedin"
-                    bgColor="bg-pgreen"
-                  />
-                </div>
-              </div> -->
             </div>
           </div>
         </div>
