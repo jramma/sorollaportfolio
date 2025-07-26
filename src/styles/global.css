@@ -91,9 +91,18 @@
   @font-face {
     font-family: 'JetBrainsMono';
     src:
-      url('/fonts/JetBrainsMono.ttf') format('truetype'),
+      url('/fonts/JetBrainsMono-Regular.ttf') format('truetype'),
       local(JetBrainsMono);
     font-weight: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'JetBrainsMono';
+    src:
+      url('/fonts/JetBrainsMono-Bold.ttf') format('truetype'),
+      local(JetBrainsMono);
+    font-weight: 700;
     font-display: swap;
   }
 
@@ -103,8 +112,3 @@ body {
   font-family: 'JetBrainsMono', sans-serif;
   background-color: #f2f2f2;
 }
-
-/* * {
-  margin-top: 0.3rem !important;
-  margin-bottom: 0.3rem !important;
-} */
