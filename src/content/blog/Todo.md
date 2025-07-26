@@ -21,13 +21,24 @@ heroImage: "/src/assets/shuang.jpg"
 - [x] Change font
 - [x] Recent work add left padding for mobile
 - [x] Config Eslint
+- [ ] Icon
+- [ ] Accessibiallity
+- [ ] Add state to nav when in different page
+- [ ] Client server or 
+- [ ] About this project
+- [ ] Change Home to portfolio
+- [ ] Nav is too right
+- [ ] Heading nav and logo are not in a row in a small screen
+- [ ] Hamburger modal too big
+- [ ] how to use mdx
+
 
 ## Write Blog
 
 ### School
 
-- [ ] Photography final project
-- [ ] Web1 project
+- [ ] Web1 Midterm
+- [ ] Web1 Final
 
 ### Personal
 
