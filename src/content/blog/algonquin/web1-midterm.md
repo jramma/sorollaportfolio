@@ -21,94 +21,96 @@ For the midterm project, I built a single-page website to practice structuring a
 - HTML
 - CSS
 
-## Challenges Faced and What I Learned
-While working on this project, I encountered:
-- **How to make body center:** Use vw to set the max width of the browser's visible width and set margin to 0 auto making it center.
+## Challenges Faced 
+While working on this project, I ran into a few chanllenges but I also learned a lot.
 
-    ``` css
-    body {
-        /* Set body to 80% of the viewport's width */
-        max-width: 80vw; 
-        /* Center it with 10% empty on each side for good readability */
-        margin: 0 auto;  
-        background-color: rgb(178, 211, 207);
-    }
-    ```
+### Centering the Page
 
-- **Set header background-image** 
-    - background-repeat: no-repeat; means the image will not repeat across the element
-    - background-position: center; center the image horizontally and vertically
-    - background-size: cover; means the image scales to fully cover the element while maintaining aspect ratio, cropping if needed
-        - 50%; 50% of the element's width, height auto to maintain aspect ration
-        - contain; fill image inside the element, no cropping
-        - auto; keep original size
+I wanted the page content to stay centered no matter the screen size. To do that, I used a max-width in vw (viewport width) and margin: 0 auto; to center everyting.
 
-    ``` css
-    header {
-        background-image: url('lone-starfish.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    ```
+``` css
+body {
+    /* Set the width to 80% of the screen */
+    max-width: 80vw; 
+    /* Automatically center the body */
+    margin: 0 auto;  
+}
+```
 
-- **Clear Float:** the floated element is taken out of the normal layout flow which means other content may wrap around the floated element, so avoid the title 'Facts About Starfish' wrapping by setting the clear class
-    ``` css
-    .clear {
-        /* both ensures that content after a float starts on a new line, not beside the floated element */
-        clear: both;
-    }
-    ```
+### Set header background-image
 
-- **Form**
-    - put label and input in different lines without setting display: set input width to 99%
-    - link label with input: set for to label and id to input with the same value
-    - implicit label: put input inside a label 
-    - radio button: set all radio input with the same name
-    
-    ``` html
-      <div class="form-container">
-        <form action="./test.html" method="get">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="4" required> </textarea>
+To style the header with an image and control its position and scaling: 
 
-            <p>Would you like to visit the starfish?</p>
-            <label>Yes<input type="radio" id="yes" name="fav_visit" value="Yes"></label>
-            <label>No<input type="radio" id="no" name="fav_visit" value="No"></label>
-            <label>Maybe<input type="radio" id="maybe" name="fav_visit" value="Maybe"></label>
-            <button type="submit">SEND</button>
-        </form>
-    </div>
-    ```
+``` css
+header {
+    background-image: url('lone-starfish.jpg');
+    background-repeat: no-repeat; /* Don’t repeat the image */
+    background-position: center;  /* Center it horizontally and vertically */
+    background-size: cover; /* Stretch it to fill the header */
+}
+```
 
-    ``` css
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        /* It ensures your inputs and textarea expand nearly fully 
-        across the form width while leaving a slight margin to avoid layout issues */
-        width: 99%;
-        border: 1px solid #ccc;
-        box-sizing: border-box;
-        margin-bottom: 5px;
-        padding: 2px;
-    }
-    ```
+#### Some other values for background-size:
+- 50% – image takes up 50% of the width (height auto)
+- contain – image fits completely inside the box without cropping
+- auto – keeps original image size
 
-- **Can not change textarea size**
-    ``` css
-    textarea {
-        resize: none;
-    }
-    ```
+### Clear Floats
+I used a floated image, but the text that came after started wrapping around it. To fix this, I added a clear class to stop the wrapping:
 
-- **Button font:** By default, buttons have browser styles, which include their own font family. This may not match the font of your page.
-    ``` css
-    button {
-        font-family: inherit;
-    }
-    ```
+``` css
+.clear {
+    /* this makes sure the content after a float starts on a new line */
+    clear: both;
+}
+```
+
+### Working with a Form
+
+- Don't need to set display: block to move inputs to new lines - setting width: 99% works well.
+- To link a label and input, use the for attribute on the label and id on the input with the same value.
+- Implict label: just nest the input inside the label (no for needed)
+- For radio buttons to work as a group, give them the same time.
+
+``` html
+<form action="" method="get">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" rows="4" required> </textarea>
+
+    <p>Would you like to visit the starfish?</p>
+    <label>Yes<input type="radio" id="yes" name="fav_visit" value="Yes"></label>
+    <label>No<input type="radio" id="no" name="fav_visit" value="No"></label>
+    <label>Maybe<input type="radio" id="maybe" name="fav_visit" value="Maybe"></label>
+    <button type="submit">SEND</button>
+</form>
+```
+
+``` css
+input[type="text"],
+input[type="email"],
+textarea {
+    /* It ensures the inputs expand nearly fully across the form width while leaving a slight margin to avoid layout issues */
+    width: 99%;
+}
+```
+
+### Making textarea non-resizable
+``` css
+textarea {
+    resize: none;
+}
+```
+
+### Button Font Mathing Page Font
+
+By default, buttons have their own font styles. To match them with the page font:
+
+``` css
+button {
+    font-family: inherit;
+}
+```
