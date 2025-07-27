@@ -10,18 +10,17 @@ tags: ["algonquin"]
 ## Overview
 For the midterm project, I built a single-page website to practice structuring a website with semantic HTML and custom CSS styling. This project helped me learn how to create a clear layout with a header, navigation, main content sections, form, and a footer while applying consistent design.
 
-## Demo
-[🌐 View the Demo Here](https://liu00701.github.io/midterm/)
+[🌐 View the Demo](https://liu00701.github.io/midterm/)
 
-[🧑‍💻 View the Code Here](https://github.com/liu00701/liu00701.github.io/tree/main/midterm)
+[🧑‍💻 View the Code](https://github.com/liu00701/liu00701.github.io/tree/main/midterm)
 
-![Screenshot of Website](/images/screenshot-lone-starfish.jpg)
+![Screenshot of Website](/public/images/screenshot-lone-starfish.jpg)
 
 ## Technologies Used
 - HTML
 - CSS
 
-## Challenges Faced 
+## Challenges & Takeaways
 While working on this project, I ran into a few chanllenges but I also learned a lot.
 
 ### Centering the Page
