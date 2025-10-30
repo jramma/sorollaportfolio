@@ -5,7 +5,7 @@ description:
   '
 icon: "3"
 pubDate: "Jun 19 2024"
-heroImage: "/src/assets/adriana.jpg"
+heroImage: "/src/assets/adriana.webp"
 ---
 
 # Title 1

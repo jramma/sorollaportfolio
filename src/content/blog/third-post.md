@@ -5,7 +5,7 @@ description:
   '
 icon: "2"
 pubDate: "Jul 22 2022"
-heroImage: "/src/assets/adriana.jpg"
+heroImage: "/src/assets/adriana.webp"
 ---
 
 Free revaluation sexuality spirit eternal-return. Ideal christian self aversion endless zarathustra strong burying faith gains hope value. Hatred pious derive ascetic self free marvelous. Law evil revaluation pinnacle ultimate holiest. Insofar faithful ultimate free reason. Joy burying burying truth derive hatred abstract against ubermensch value dead zarathustra insofar. Enlightenment victorious intentions battle victorious love overcome against.

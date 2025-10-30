@@ -2,7 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{jpeg,jpg,png,gif}"
+  "/src/assets/*.{webp,jpg,png,gif}"
 );
 ---
 
@@ -53,7 +53,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
           <Image
             class="object-bottom absolute bottom-0 group-hover:scale-105 transition"
-            src={images["/src/assets/hero.png"]()}
+            src={images["/src/assets/hero.webp"]()}
             alt="Sorolla, photo wiki"
           />
         </div>

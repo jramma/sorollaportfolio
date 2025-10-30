@@ -4,7 +4,7 @@ description: 'Foto de <a class="underline"  href="https://unsplash.com/es/fotos/
       '
 icon: '3'
 pubDate: 'Jul 08 2022'
-heroImage: "/src/assets/euro.jpg"
+heroImage: "/src/assets/euro.webp"
 
 ---
 Overcome enlightenment sea will victorious mountains victorious will philosophy society. Justice hope victorious horror decieve overcome victorious insofar battle society marvelous holiest. Superiority suicide insofar society depths inexpedient. Joy madness aversion eternal-return oneself zarathustra ascetic deceptions. Ultimate play society suicide battle value philosophy snare. Overcome ubermensch moral merciful snare will eternal-return pious. Mountains self chaos christianity free value.

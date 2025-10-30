@@ -23,10 +23,10 @@ The `/src` directory contains the main source code for the project. Below is an 
 ```
 src
 ├── assets
-│   ├── adriana.jpg
-│   ├── euro.jpg
-│   ├── fran.jpg
-│   └── hero.png
+│   ├── adriana.webp
+│   ├── euro.webp
+│   ├── fran.webp
+│   └── hero.webp
 ├── components
 │   ├── BaseHead.astro
 │   ├── Footer.astro

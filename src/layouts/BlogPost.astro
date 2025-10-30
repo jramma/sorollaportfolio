@@ -13,7 +13,7 @@ const {
   description,
   pubDate,
   updatedDate,
-  heroImage = "/fran.jpg",
+  heroImage = "/fran.webp",
   icon,
   tags,
 } = Astro.props;
@@ -30,8 +30,8 @@ const bgClasses = [
 ];
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
-if (!images[heroImage]) throw new Error(`"${heroImage}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{webp,jpeg,jpg,png,gif}')
+if (!images[heroImage]) throw new Error(`"${heroImage}" does not exist in glob: "src/assets/*.{webp,jpeg,jpg,png,gif}"`);
 
 const getRandomClass = () => {
   return bgClasses[Math.floor(Math.random() * bgClasses.length)];
@@ -99,7 +99,7 @@ const getRandomClass = () => {
               <p>Written by</p>
               <div class="flex -mt-4 gap-2">
                   <div class="bg-pgreen rounded-full w-12 h-12 aspect-square object-contain overflow-hidden ">
-                    <Image src={images["/src/assets/hero.png"]()} alt="Fran" />
+                    <Image src={images["/src/assets/hero.webp"]()} alt="Fran" />
                   </div>
                   <div>
                   <h3>Joaquín Sorolla</h3>
