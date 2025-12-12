@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 import FormattedDate from "@/components/FormattedDate.astro";
 import { Icon } from "astro-icon/components";
@@ -18,10 +18,12 @@ const getRandomClass = () => {
 };
 ---
 
-<section class="flex flex-col text-center gap-4 " >
+<section class="flex flex-col items-center text-center gap-4">
   <p class="text-pblack">It is necessary to observe.</p>
   <h2 class="text-4xl font-bold">Treated like a portrait.</h2>
-  <ul class="flex flex-wrap justify-center md:justify-start gap-8 py-20">
+  <ul
+    class="flex flex-wrap max-w-[940px] mx-auto justify-center md:justify-start gap-8 py-20 "
+  >
     {
       posts.map((post) => {
         const randomClass = getRandomClass();
