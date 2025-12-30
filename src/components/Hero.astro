@@ -1,9 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-const images = import.meta.glob<{ default: ImageMetadata }>(
-  "/src/assets/*.{webp,jpg,png,gif}"
-);
+import { Picture } from "astro:assets";
+import img from "/src/assets/hero.webp";
 ---
 
 <section
@@ -53,9 +51,12 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
           <p>Joaquín Sorolla</p>
         </div>
         <div class="h-80 w-60 overflow-hidden relative -mt-30 rounded-2xl">
-          <Image
+          <Picture
             class="object-bottom absolute bottom-0 group-hover:scale-105 transition"
-            src={images["/src/assets/hero.webp"]()}
+            src={img}
+            format="webp"
+            sizes="(max-width: 300px) 100vw, 600px"
+            widths={[300, 600]}
             alt="Sorolla, photo wiki"
           />
         </div>
