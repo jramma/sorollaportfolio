@@ -29,13 +29,13 @@ const getRandomClass = () => {
         const randomClass = getRandomClass();
         return (
           <li class="w-72 text-left rounded-3xl border-1 border-black shadow-card group hover:shadow-hover transition  px-4 py-6 flex flex-col gap-6">
-            <a href={`/blog/${post.id}/`} class="flex flex-col gap-4">
+            <a aria-label={post.data.title} href={`/blog/${post.id}/`} class="flex flex-col gap-4">
               <div
                 class={`${randomClass} text-4xl p-2 self-start border-1 border-black shadow-card1 group-hover:shadow-card transition`}
               >
                 <Icon name={post.data.icon} />
               </div>
-              <h4 class="text-xl font-semibold">{post.data.title}</h4>
+              <h2 class="text-xl font-semibold">{post.data.title}</h2>
               <p class="date -mt-4 text-sm font-light">
                 <FormattedDate date={post.data.pubDate} />
               </p>

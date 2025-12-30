@@ -87,6 +87,7 @@ const getRandomClass = () => {
                       <li class=`text-left rounded-lg border-1 border-black shadow-card group hover:shadow-hover transition  px-2 py-2 ${getRandomClass()}` >
                         <a
                           href={`/blog/${post.id}/`}
+                          aria-label={post.data.title}
                         >
                           <h4 >{post.data.title}</h4>
                         </a>
@@ -114,6 +115,7 @@ const getRandomClass = () => {
                     href="https://jramma.com"
                     target="_blank"
                     class="py-1 pl-3 rounded-md border-1 border-black bg-ppink shadow-card hover:shadow-hover transition"
+                    aria-label="Personal Website"
                   >
                     <Icon name="web" />
                   </a>
@@ -121,13 +123,15 @@ const getRandomClass = () => {
                     href="https://github.com/jramma"
                     target="_blank"
                     class="border-1 p-1 border-black rounded-full bg-pblue shadow-card hover:shadow-hover transition"
-                  >
+                    aria-label="GitHub Profile"
+                    >
                     <Icon name="github" />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/jramma/"
                     target="_blank"
                     class="border-1 p-1 border-black rounded-full bg-pgreen shadow-card hover:shadow-hover transition"
+                    aria-label="LinkedIn Profile"
                   >
                     <Icon name="linkedin" />
                   </a>
