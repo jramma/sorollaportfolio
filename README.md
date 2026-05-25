@@ -118,3 +118,15 @@ To run this project locally:
 ## 📄 License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Deploy on Cloudfare
+
+1. Create an account on Cloudfare
+
+2. Execute:
+
+  ```bash
+  npx wrangler pages deploy dist --project-name=sorolla
+  ```
+
+3. Check settings on Cloudfare workers/pages
