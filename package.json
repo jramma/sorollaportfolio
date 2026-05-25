@@ -1,8 +1,13 @@
 {
   "name": "demo-portfolio",
   "type": "module",
-  "version": "1.0.1",
-  "author": "jramma.com",
+  "version": "1.2.0",
+  "license": "MIT",
+  "author": "casset.cat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jramma/sorollaportfolio"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

@@ -4,7 +4,7 @@
 
 Welcome to my personal portfolio demo repository! This project is a demonstration of what a personal portfolio could look like. It showcases various aspects of web development, including my work, skills, and projects.
 
-- You can view the deployed project at the following URL: [https://sorolla.netlify.app/](https://sorolla.netlify.app/)
+- You can view the deployed project at the following URL: [https://sorolla.casset.cat/](https://sorolla.casset.cat/)
 - Astro web templates: <https://astro.build/themes/details/sorollaportfolio/>
 
 ## 📂 Project Structure
@@ -124,9 +124,15 @@ This project is licensed under the [MIT License](LICENSE).
 1. Create an account on Cloudfare
 
 2. Execute:
-
+ 
   ```bash
+  
+  pnpm i
+  
+  pnpm run build
+  
   npx wrangler pages deploy dist --project-name=sorolla
+  
   ```
 
 3. Check settings on Cloudfare workers/pages
