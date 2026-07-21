@@ -2,3 +2,5 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: false
   sharp: true
+minimumReleaseAgeExclude:
+  - astro@7.1.3

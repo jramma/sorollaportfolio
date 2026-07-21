@@ -131,6 +131,7 @@ This project is licensed under the [MIT License](LICENSE).
   
   pnpm run build
   
+  # First you need a Cloudfare account  
   npx wrangler pages deploy dist --project-name=sorolla
   
   ```
